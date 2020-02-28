@@ -9,11 +9,11 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-<%--    <link type="text/css" rel="stylesheet"--%>
-<%--          href="${pageContext.request.contextPath}/resources/css/style.css"/>--%>
-    <style>
-        <%@include file="/resources/css/style.css" %>
-    </style>
+    <link type="text/css" rel="stylesheet"
+          href="${pageContext.request.contextPath}/resources/css/style.css"/>
+<%--    <style>--%>
+<%--        <%@include file="/resources/css/style.css" %>--%>
+<%--    </style>--%>
     <title>Home page</title>
 </head>
 <body>
