@@ -9,6 +9,11 @@
          id="WebApp_ID" version="3.1">
   <display-name>Customer Relationship Management API</display-name>
 
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
   <absolute-ordering />
 
   <servlet>
@@ -23,5 +28,9 @@
   <servlet-mapping>
     <servlet-name>dispatcher</servlet-name>
     <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>default</servlet-name>
+    <url-pattern>/resources/JavaScript/*</url-pattern>
   </servlet-mapping>
 </web-app>

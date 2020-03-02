@@ -21,6 +21,12 @@
         <div>
             <h1>CRM - Customer Relation Manager</h1>
         </div>
+        <div>
+            <input type="button" value="Add Customer"
+                   onclick="window.location.href='addCustomerForm'; return false;"
+                   class="add-button"/>
+        </div>
+        <br>
         <div class="tbl-header">
             <table cellpadding="0" cellspacing="0" border="0">
                 <thead>

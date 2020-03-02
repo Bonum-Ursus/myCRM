@@ -17,7 +17,7 @@ table{
 .tbl-content{
     height:auto;
     overflow-x:auto;
-    margin-top: 0px;
+    margin-top:0px;
     border: 1px solid rgba(255,255,255,0.3);
 }
 th{
@@ -39,16 +39,47 @@ td{
     border-left: solid 1px rgba(255,255,255,0.1);
 }
 
+.add-button {
+    outline-color: transparent;
+    background: #a185d6;
+    display:inline-block;
+    padding:0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border:0.16em solid rgba(255,255,255,0);
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    font-size: 18px;
+    color:#FFFFFF;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    text-align:center;
+    transition: all 0.2s;
+}
+.add-button:hover{
+    border-color: rgba(255,255,255,1);
+    background: #4ebb89;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.4);
+    transform : translateY(-3px);
+}
+@media all and (max-width:30em){
+     .add-button{
+        display:block;
+        margin:0.2em auto;
+    }
+}
+
 
 /* demo styles */
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
 body{
-    background: -webkit-linear-gradient(left, #7b22c4, #766ec4);
-    background: linear-gradient(to right, #7b22c4, #766ec4);
+    background: -webkit-linear-gradient(left, #020202f3, #8c3dd6d3);
+    background: linear-gradient(to right, #020202f3, #8c3dd6d3);
     font-family: 'Roboto', sans-serif;
 }
 .container{
-    margin-left: 15rem;
-    margin-right: 15rem;
+    margin: 0 auto;
+    width: 80%;
 }
