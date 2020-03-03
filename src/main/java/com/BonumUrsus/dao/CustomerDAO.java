@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface CustomerDAO {
+    void deleteCustomer(int id);
+
+    Customer getCustomer(int id);
+
     public List<Customer> getCustomers();
 
     void saveCustomer(Customer customer);

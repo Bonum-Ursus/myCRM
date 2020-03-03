@@ -34,6 +34,7 @@
                             <th>First name</th>
                             <th>Last name</th>
                             <th>Email</th>
+                            <th>Action</th>
                         </tr>
                 </thead>
             </table>
@@ -42,10 +43,23 @@
             <table cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                         <c:forEach var="tempCustomer" items="${customers}">
+                            <c:url var="updateLink" value="showFormForUpdate">
+                                <c:param name="customerId" value="${tempCustomer.id}"/>
+                            </c:url>
+                            <c:url var="deleteLink" value="deleteCustomer">
+                                <c:param name="customerId" value="${tempCustomer.id}"/>
+                            </c:url>
                             <tr>
                                 <td> ${tempCustomer.firstName}</td>
                                 <td> ${tempCustomer.lastName}</td>
                                 <td> ${tempCustomer.email}</td>
+                                <td style="text-align: center">
+                                    <a href="${updateLink}" style="color: white">Update</a>
+                                    |
+                                    <a href="${deleteLink}" onclick=
+                                            "if (!(confirm('Are you sure you want to delete this customer?')))
+                                                return false" style="color: white">Delete</a>
+                                </td>
                             </tr>
                         </c:forEach>
                 </tbody>

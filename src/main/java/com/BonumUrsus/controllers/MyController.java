@@ -6,10 +6,7 @@ import com.BonumUrsus.services.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,12 +28,23 @@ public class MyController {
     public String getAddCustomerForm(Model model){
         Customer customer = new Customer();
         model.addAttribute("customer", customer);
-        return "addCustomerForm";
+        return "customerForm";
+    }
+    @GetMapping(value = "/showFormForUpdate")
+    public String getShowFormForUpdate(@RequestParam("customerId") int id, Model model){
+        Customer customer = customerService.getCustomer(id);
+        model.addAttribute("customer", customer);
+        return "customerForm";
     }
 
     @PostMapping("/saveCustomer")
     public String saveCustomer(@ModelAttribute("customer") Customer customer){
         customerService.saveCustomer(customer);
+        return "redirect:/start";
+    }
+    @GetMapping("/deleteCustomer")
+    public String deleteCustomer(@RequestParam("customerId") int id, Model model){
+        customerService.deleteCustomer(id);
         return "redirect:/start";
     }
 

@@ -25,6 +25,7 @@
         <h3>Add Customer:</h3>
         <br><br>
         <form:form action="saveCustomer" modelAttribute="customer" method="post">
+            <form:hidden path="id" />
             <table id="table1">
                 <tbody>
                 <tr>
