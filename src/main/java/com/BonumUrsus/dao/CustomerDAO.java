@@ -14,4 +14,6 @@ public interface CustomerDAO {
     public List<Customer> getCustomers();
 
     void saveCustomer(Customer customer);
+
+    List<Customer> searchCustomer(String name);
 }

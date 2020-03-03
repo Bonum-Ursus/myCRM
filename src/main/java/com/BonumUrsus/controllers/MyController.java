@@ -43,9 +43,16 @@ public class MyController {
         return "redirect:/start";
     }
     @GetMapping("/deleteCustomer")
-    public String deleteCustomer(@RequestParam("customerId") int id, Model model){
+    public String deleteCustomer(@RequestParam("customerId") int id){
         customerService.deleteCustomer(id);
         return "redirect:/start";
+    }
+    @GetMapping("/search")
+    public String search(@RequestParam("searchName") String name, Model model){
+        List<Customer> customers = customerService.searchCustomer(name);
+
+        model.addAttribute("customers", customers);
+        return "home-page";
     }
 
 

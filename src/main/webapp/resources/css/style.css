@@ -7,6 +7,23 @@ h1{
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
+h3{
+    color: #fff;
+}
+.fullCustList{
+    color: #fff;
+}
+.inputForm{
+    width: 15rem;
+    height: 2rem;
+    background-color:transparent;
+    color: white;
+    border-radius: 2em/3em;
+    text-align: center;
+}
+.inputForm:focus{
+    outline-color: transparent;
+}
 table{
     width:100%;
     table-layout: fixed;
@@ -28,7 +45,7 @@ th{
     color: #fff;
     text-transform: uppercase;
 }
-td{
+.customerContentList{
     padding: 15px;
     text-align: left;
     vertical-align:middle;
@@ -68,6 +85,14 @@ td{
         display:block;
         margin:0.2em auto;
     }
+}
+.upperBar{
+    border: none;
+    text-align: center;
+}
+.upperTable{
+    width: 80%;
+    margin: 0 auto;
 }
 
 

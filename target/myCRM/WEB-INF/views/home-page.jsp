@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
 <%--    <link type="text/css" rel="stylesheet"--%>
@@ -18,15 +19,33 @@
 </head>
 <body>
     <div class="container">
+        <br>
+        <br>
         <div>
             <h1>CRM - Customer Relation Manager</h1>
         </div>
-        <div>
-            <input type="button" value="Add Customer"
-                   onclick="window.location.href='addCustomerForm'; return false;"
-                   class="add-button"/>
-        </div>
         <br>
+        <br>
+        <div>
+            <form:form action="search" method="get">
+                <table class="upperTable">
+                    <tr>
+                        <td class="upperBar">
+                            <input type="button" value="Add Customer"
+                                   onclick="window.location.href='addCustomerForm'; return false;"
+                                   class="add-button"/>
+                        </td>
+                        <td class="upperBar">
+                            <h3>Search Customer by name:
+                                <input class="inputForm" type="text" name="searchName" placeholder="Type here Customer name" />
+                                <input type="submit" value="Search" class="add-button"/>
+                                <h4><a class="fullCustList" href="/start">Show full customer list</a> </h4>
+                            </h3>
+                        </td>
+                    </tr>
+                </table>
+            </form:form>
+        </div>
         <div class="tbl-header">
             <table cellpadding="0" cellspacing="0" border="0">
                 <thead>
@@ -50,10 +69,10 @@
                                 <c:param name="customerId" value="${tempCustomer.id}"/>
                             </c:url>
                             <tr>
-                                <td> ${tempCustomer.firstName}</td>
-                                <td> ${tempCustomer.lastName}</td>
-                                <td> ${tempCustomer.email}</td>
-                                <td style="text-align: center">
+                                <td class="customerContentList"> ${tempCustomer.firstName}</td>
+                                <td class="customerContentList"> ${tempCustomer.lastName}</td>
+                                <td class="customerContentList"> ${tempCustomer.email}</td>
+                                <td class="customerContentList" style="text-align: center">
                                     <a href="${updateLink}" style="color: white">Update</a>
                                     |
                                     <a href="${deleteLink}" onclick=
