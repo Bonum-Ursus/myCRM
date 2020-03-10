@@ -38,6 +38,8 @@
                         <td class="upperBar">
                             <h3>Search Customer by name:
                                 <input class="inputForm" type="text" name="searchName" placeholder="Type here Customer name" />
+                                <br>
+                                <br>
                                 <input type="submit" value="Search" class="add-button"/>
                                 <h4><a class="fullCustList" href="/start">Show full customer list</a> </h4>
                             </h3>

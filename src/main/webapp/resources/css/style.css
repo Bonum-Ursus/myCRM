@@ -14,9 +14,10 @@ h3{
     color: #fff;
 }
 .inputForm{
-    width: 15rem;
+    width: 100%;
+    max-width: 15rem;
     height: 2rem;
-    background-color:transparent;
+    background-color:transparent !important;
     color: white;
     border-radius: 2em/3em;
     text-align: center;
